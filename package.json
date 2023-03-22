@@ -1,0 +1,25 @@
+{
+  "name": "xiangmu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alicloud/dysmsapi20170525": "^2.0.23",
+    "@alicloud/sms-sdk": "^1.1.6",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-jwt": "^5.3.3",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "typescript": "^5.0.2"
+  }
+}
