@@ -17,6 +17,7 @@ const config = require('../config')
 
 const request = require('request');
 const { response } = require('express');
+const { escape } = require('mysql');
 
 //这个函数没用--------------------------------
 // exports.loginHandler = (req, res) => {
@@ -139,5 +140,28 @@ exports.regUser = (req, res) => {
             })
         }
     })
+    // res.send('ok')
+}
+
+exports.keywordSearch = (req, res) => {
+    // console.log(req.query)
+    console.log(typeof (req.query.kw))
+    const kw = "'%" + req.query.kw.replace(/'/g, '') + "%'"
+    // const kw1 = escape(req.body.kw)
+    console.log(kw)
+    // const sql = `SELECT name, bx FROM desease_know WHERE MATCH (name, bx) 
+    // AGAINST (? IN NATURAL LANGUAGE MODE) LIMIT 2`;
+    // '"${kw}"'
+    const sql1 = `SELECT * FROM desease_know WHERE name LIKE ${kw} `
+    dbUser.query(sql1, (error, resullt) => {
+        console.log(sql1)
+        if (error) {
+            // console.log(error)
+            res.cc(error)
+        }
+        else res.send(resullt)
+
+    })
+
     // res.send('ok')
 }

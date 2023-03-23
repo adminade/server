@@ -74,7 +74,9 @@ app.use('/my/article', artCateRouter);
 
 //本地微信小程序路由
 const localserver = require('./router/localserver');
+app.use('/localserver', localserver)
 app.use('/api/localserver', localserver)
+
 app.use('/utils/localserver', localserver)
 
 

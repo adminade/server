@@ -36,6 +36,8 @@ router.post('/regUser', loginHandler.regUser)
 
 //短信路由
 router.get('/requestSMS', SMSHandler.sendSMS)
+//搜索文章路由
+router.get('/keywordSearch', loginHandler.keywordSearch)
 
 //将路由对象共享出去
 module.exports = router

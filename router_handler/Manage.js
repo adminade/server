@@ -16,7 +16,7 @@ exports.article = (req, res) => {
 exports.addArticle = (req, res) => {
     console.log(req.body.bz)
     const sql = `select * from desease_know where name = ?`;
-    deUser.query(sql, req.body.title, (error, resutll) => {
+    dbUser.query(sql, req.body.title, (error, resullt) => {
         if (resullt.length > 0) {  //如果查询的结果>1， res返回错误
             return res.cc('已有该标题，请更换标题!')
         }
@@ -87,3 +87,4 @@ exports.dleAticle = (req, res) => {
     })
     // res.send('ok')
 }
+
