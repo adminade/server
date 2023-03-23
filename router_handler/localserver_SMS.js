@@ -7,8 +7,8 @@ const SMSClient = require('@alicloud/sms-sdk');
 
 exports.sendSMS = (req, res) => {
     let smsCode = Math.random().toString().slice(-6);
-    let accessKeyId = "LTAI5t6Bevr22idfyURGWwd1";// AccessKey ID
-    let secretAccessKey = "P4fl5qn6dCCckYW9RwgTZMsG42ldLj";// AccessKey Secret
+    let accessKeyId = 
+    let secretAccessKey = 
     let signName = "您的养殖场"; // 签名名称
     let templateCode = "SMS_274640408";// 短信模板code
 
