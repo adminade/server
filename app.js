@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-
+const ws = require('nodejs-websocket')
 
 const cors = require('cors');
 //ocrs是方法注意有括号
@@ -81,9 +81,20 @@ app.use('/utils/localserver', localserver)
 
 
 //管理系统。。。除了注册用户，都在下面这个路由中
-const localserverManage = require('./router/localserverManage')
+const localserverManage = require('./router/localserverManage');
+const Connection = require('nodejs-websocket/Connection');
+
+
+
+// const { dbPig } = require('./db/index')
+
+const utils = require('./tools/ararmScore')
+
 app.use('/api/localserverManage', localserverManage)
 
 app.listen(80, () => {
+    //监听数据库更新，验证规则发送短信提醒
+    // utils.monitorDb()
     console.log('server running in 127.0.0.1:80')
+
 })

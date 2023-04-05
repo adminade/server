@@ -15,9 +15,18 @@ const dbUser = mysql.createPool({
     database: 'server',
 })
 
+const dbPig = mysql.createPool({
+    host: '127.0.0.1',
+    user: 'root',
+    password: 'root',
+    database: 'pig',
+    multipleStatements: true
+})
+
 
 //暴露，谁想用 就调用db
 module.exports = {
     db: db,
-    dbUser: dbUser
+    dbUser: dbUser,
+    dbPig: dbPig
 };

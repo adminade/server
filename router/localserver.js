@@ -39,5 +39,65 @@ router.get('/requestSMS', SMSHandler.sendSMS)
 //搜索文章路由
 router.get('/keywordSearch', loginHandler.keywordSearch)
 
+router.get('/upkeepQuery', loginHandler.upkeepQuery)
+
+router.get('/cateNumber', loginHandler.cateNumber)
+
+router.get('/getCate', loginHandler.getCate)
+
+router.post('/addPig', loginHandler.addPig)
+
+router.get('/transferHistory', loginHandler.transferHistory)
+
+router.get('/getCatepigSum', loginHandler.getCate_pigSum)
+
+router.post('/deleteHouse', loginHandler.deleteHouse)
+
+router.post('/addHouse', loginHandler.addHouse)
+
+router.post('/checkPigNumber', loginHandler.checkPigNumber)
+
+router.post('/addTransfer', loginHandler.addTransfer)
+
+router.get('/operateHistory', loginHandler.operateHistory)
+
+router.post('/addOperateDairy', loginHandler.addOperateDairy)
+
+router.get('/deseaseHistory', loginHandler.deseaseHistory)
+
+router.post('/adddeseaseDairy', loginHandler.adddeseaseDairy)
+
+router.get('/getDieOutHistory', loginHandler.getDieOutHistory)
+
+router.get('/getPigNumber', loginHandler.getPigNumber)
+
+router.post('/addDieOut', loginHandler.addDieOut)
+
+router.get('/getDrugs', loginHandler.getDrugs)
+
+router.get('/getDrugHistory', loginHandler.getDrugHistory)
+
+router.post('/addDrugDairy', loginHandler.addDrugDairy)
+
+router.get('/getbuyData', loginHandler.getbuyData)
+
+router.post('/addBuyData', loginHandler.addBuyData)
+
+router.get('/getSoldData', loginHandler.getSoldData)
+
+router.post('/addSoldData', loginHandler.addSoldData)
+
+router.get('/getDeviceStatus', loginHandler.getDeviceStatus)
+
+router.post('/addDevice', loginHandler.addDevice)
+
+router.post('/getenv', loginHandler.getenv)
+
+router.get('/getUserInfo', loginHandler.getUserInfo)
+
+
+router.post('/addfix', loginHandler.addfix)
+
+router.get('/getAlarm', loginHandler.getAlarm)
 //将路由对象共享出去
 module.exports = router
